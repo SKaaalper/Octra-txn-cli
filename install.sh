@@ -34,7 +34,7 @@ read -r PRIV
 
 # Prompt for Octra wallet address
 while true; do
-  echo -e "${CYAN}💳 Enter recipient Octra wallet address (must start with 'oct'):${NC}"
+  echo -e "${CYAN}💳 Enter your Octra wallet address (must start with 'oct'):${NC}"
   read -r TO_ADDR
   if [[ $TO_ADDR =~ ^oct[a-zA-Z0-9]+$ ]]; then
     echo -e "${GREEN}✔️ Valid address: $TO_ADDR${NC}"
