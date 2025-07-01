@@ -32,19 +32,17 @@ echo ""
 echo -e "${CYAN}🔐 Enter your PRIVATE KEY (Base64 format):${NC}"
 read -r PRIV
 
-# Auto-fetch valid recipient?
-echo -e "${CYAN}🔍 Fetching recent recipient from explorer...${NC}"
-TO_ADDR=$(curl -s https://octrascan.io/network \
-  | grep -o 'To: oct[a-zA-Z0-9]*' \
-  | awk '{print $2}' \
-  | shuf -n 1)
-
-if [[ $TO_ADDR =~ ^oct[a-zA-Z0-9]+$ ]]; then
-  echo -e "${GREEN}✔️ Found recent recipient address: $TO_ADDR${NC}"
-else
-  echo -e "${RED}❌ Unable to fetch recipient. Enter manually:${NC}"
+# Prompt for Octra wallet address
+while true; do
+  echo -e "${CYAN}💳 Enter recipient Octra wallet address (must start with 'oct'):${NC}"
   read -r TO_ADDR
-fi
+  if [[ $TO_ADDR =~ ^oct[a-zA-Z0-9]+$ ]]; then
+    echo -e "${GREEN}✔️ Valid address: $TO_ADDR${NC}"
+    break
+  else
+    echo -e "${RED}❌ Invalid address. Try again.${NC}"
+  fi
+done
 
 # Prompt for RPC
 echo -e "${CYAN}🌐 Enter RPC endpoint [default (Press Enter): https://octra.network]:${NC}"
