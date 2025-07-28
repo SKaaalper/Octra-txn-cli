@@ -12,7 +12,7 @@ clear
 echo -e "${CYAN}========================================${NC}"
 echo -e "${GREEN}      OCTRA CLI QUICK INSTALLER${NC}"
 echo -e "${CYAN}========================================${NC}"
-echo -e "${BOLD}        by @_Jheff — let's go!${NC}\n"
+echo -e "${BOLD}              by _Jheff ${NC}\n"
 
 # 1. Rust install
 echo -e "${YELLOW}[1/8] Checking Rust...${NC}"
