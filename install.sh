@@ -10,7 +10,7 @@ RED='\033[0;31m'; BOLD='\033[1m'; NC='\033[0m'
 
 clear
 echo -e "${CYAN}----------------------------------------${NC}"
-echo -e "${GREEN}       OCTRA TX CLI INSTALLER          ${NC} "
+echo -e "${GREEN}       OCTRA TXN CLI INSTALLER          ${NC} "
 echo -e "${CYAN}----------------------------------------${NC}"
 echo -e "${BOLD}             by _Jheff${NC}\n"
 
