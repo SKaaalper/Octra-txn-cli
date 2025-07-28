@@ -12,7 +12,7 @@ clear
 echo -e "${CYAN}----------------------------------------${NC}"
 echo -e "${GREEN}       OCTRA TX CLI INSTALLER          ${NC} "
 echo -e "${CYAN}----------------------------------------${NC}"
-echo -e "${BOLD}           by _Jheff${NC}\n"
+echo -e "${BOLD}             by _Jheff${NC}\n"
 
 # Step 1: System update and dependencies
 echo -e "${YELLOW}[1/7] Installing required packages...${NC}"
